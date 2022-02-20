@@ -1,8 +1,10 @@
+/* eslint-disable no-unused-vars */
 
-import React from 'react';
+import React, { useState } from 'react';
 import { AppBar, Box ,Button, Toolbar, IconButton, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import MenuIcon from '@material-ui/icons/Menu';
+import SideBar from './SideBar';
 
 const useStyles = makeStyles(() => ({
   appBar: {
@@ -37,45 +39,59 @@ const useStyles = makeStyles(() => ({
 
 const NavBar = () => {
   const classes = useStyles();
+  const [sideBarClicked, setSideBarClicked] = useState(false);
+
+  const handleDrawerOpen = () => {
+    setSideBarClicked(true);
+  };
+
+  const handleDrawerClose = () => {
+    setSideBarClicked(false);
+  };
   return (
+    <>
+      {sideBarClicked ? (
 
-    <AppBar position="static" className={classes.appBar}>
-      <Toolbar>
-        <IconButton
-          size="large"
-          edge="start"
+        <SideBar handleDrawerClose={handleDrawerClose}/>
+      ) : null}
+      <AppBar position="static" className={classes.appBar}>
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
 
-          aria-label="open drawer"
-          sx={{ mr: 2 }}
-        >
-          <MenuIcon />
-        </IconButton>
-        <div className={classes.title}>
-
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: 'none', sm: 'block' } }}
-            style={{ color: 'black' }}
+            aria-label="open drawer"
+            sx={{ mr: 2 }}
+            onClick={handleDrawerOpen}
           >
+            <MenuIcon />
+          </IconButton>
+          <div className={classes.title}>
+
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ display: { xs: 'none', sm: 'block' } }}
+              style={{ color: 'black' }}
+            >
           Cloe Roper
-          </Typography>
-        </div>
+            </Typography>
+          </div>
  
-        <Box sx={{ flexGrow: 1 }} />
-        {/* <Button className={classes.navButton} >Address</Button> */} {/* Shows when rest of navbar hidden dependant on screen size */}
+          <Box sx={{ flexGrow: 1 }} />
+          {/* <Button className={classes.navButton} >Address</Button> */} {/* Shows when rest of navbar hidden dependant on screen size */}
 
-        <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-          <Button className={classes.navButton} >Tutoring</Button>
-          <Button className={classes.navButton} >Blog</Button>
-          <Button className={classes.navButton} >Contact Me</Button>
-          <Button className={classes.navButton} >Papers</Button>
-        </Box>
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            <Button className={classes.navButton} >Tutoring</Button>
+            <Button className={classes.navButton} >Blog</Button>
+            <Button className={classes.navButton} >Contact Me</Button>
+            <Button className={classes.navButton} >Papers</Button>
+          </Box>
 
-      </Toolbar>
-    </AppBar>
-
+        </Toolbar>
+      </AppBar>
+    </>
   );
 };
 
