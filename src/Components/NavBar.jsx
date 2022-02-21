@@ -84,6 +84,7 @@ const NavBar = () => {
 
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <Button className={classes.navButton} >Tutoring</Button>
+            <Button className={classes.navButton} >About me</Button>
             <Button className={classes.navButton} >Blog</Button>
             <Button className={classes.navButton} >Contact Me</Button>
             <Button className={classes.navButton} >Papers</Button>
