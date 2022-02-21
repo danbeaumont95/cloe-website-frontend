@@ -7,6 +7,7 @@ import ArticleIcon from '@material-ui/icons/Description';
 import PdfIcon from '@material-ui/icons/PictureAsPdfRounded';
 import ContactIcon from '@material-ui/icons/ContactMail';
 import SchoolIcon from '@material-ui/icons/School';
+import AboutIcon from '@material-ui/icons/AccountCircle';
 import { makeStyles } from '@material-ui/styles';
 
 const drawerWidth = 240;
@@ -64,6 +65,13 @@ const SideBar = (props) => {
               <SchoolIcon />
             </ListItemIcon>
             <ListItemText>Tutoring</ListItemText>
+          </ListItem>
+
+          <ListItem button>
+            <ListItemIcon>
+              <AboutIcon />
+            </ListItemIcon>
+            <ListItemText>About me</ListItemText>
           </ListItem>
 
           <ListItem button>
