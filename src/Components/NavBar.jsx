@@ -30,6 +30,38 @@ const useStyles = makeStyles(() => ({
     },
     [ '@media (max-width:380px)' ]: {
       marginLeft: '25%'
+    },
+
+    backgroundImage: `linear-gradient(
+        to right,
+        #ff1493,
+        #ff1493 50%,
+        #000 50%
+      )`,
+    backgroundSize: '200% 100%',
+    backgroundPosition: '-100%',
+    display: 'inline-block',
+    padding: '5px 0',
+    position: 'relative',
+    '-webkit-background-clip': 'text',
+    ' -webkit-text-fill-color': 'transparent',
+    transition: 'all 0.3s ease-in-out',
+    '&:before': {
+      content: '',
+      background: '#54b3d6',
+      display: 'block',
+      position: 'absolute',
+      bottom: '-3px',
+      left: 0,
+      width: 0,
+      height: '3px',
+      transition: 'all 0.3s ease-in-out',
+    },
+    '&:hover': {
+      backgroundPosition: 0
+    },
+    '&:hover::before': {
+      width: '100%'
     }
   },
   navButton: {
@@ -47,6 +79,11 @@ const NavBar = () => {
 
   const handleDrawerClose = () => {
     setSideBarClicked(false);
+  };
+
+  const handleAboutClick = () => {
+
+    window.location.href = '/about';
   };
   return (
     <>
@@ -84,7 +121,7 @@ const NavBar = () => {
 
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <Button className={classes.navButton} >Tutoring</Button>
-            <Button className={classes.navButton} >About me</Button>
+            <Button className={classes.navButton} onClick={handleAboutClick}>About me</Button>
             <Button className={classes.navButton} >Blog</Button>
             <Button className={classes.navButton} >Contact Me</Button>
             <Button className={classes.navButton} >Papers</Button>

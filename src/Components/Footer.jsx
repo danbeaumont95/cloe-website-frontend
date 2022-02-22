@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    position:'fixed',
+    // position:'fixed',
     left:0,
   },
   title: {
