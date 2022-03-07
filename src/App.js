@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import About from './Components/About';
 import Footer from './Components/Footer';
+import Papers from './Components/Papers';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/about" element={<About />} />
+          <Route path="/papers" element={<Papers />} />
         </Routes>
       </Router>
       <Footer />

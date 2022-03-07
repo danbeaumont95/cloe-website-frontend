@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    // position:'fixed',
     left:0,
   },
   title: {
@@ -49,24 +48,18 @@ const Footer = () => {
   return (
     <Container className={classes.allContent}>
       <Box className={classes.box}>
-
         <Typography variant='h5' className={classes.title}>Follow me!</Typography>
-
  
         <div className={classes.icons}>
           <a href="https://www.linkedin.com/in/chloe-roper/" target="_blank" rel="noopener noreferrer">
-
             <Avatar alt="Remy Sharp" src={LinkedIn} className={classes.avatar} />
-
           </a>
   
           <a href="https://twitter.com/Cloeblencoe" target="_blank" rel="noopener noreferrer">
-
             <Avatar alt="Cindy Baker" src={Twitter} className={classes.avatar} />
           </a>
 
           <a href="https://www.facebook.com/cloe.roperblencoe/" target="_blank" rel="noopener noreferrer">
-
             <Avatar alt="Travis Howard" src={Facebook} className={classes.avatar} />
           </a>
 
