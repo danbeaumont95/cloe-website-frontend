@@ -81,10 +81,10 @@ const NavBar = () => {
     setSideBarClicked(false);
   };
 
-  const handleAboutClick = () => {
-
-    window.location.href = '/about';
+  const handleRouteClicked = (route) => {
+    window.location = `/${route}`;
   };
+
   return (
     <>
       {sideBarClicked ? (
@@ -120,11 +120,11 @@ const NavBar = () => {
           {/* <Button className={classes.navButton} >Address</Button> */} {/* Shows when rest of navbar hidden dependant on screen size */}
 
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <Button className={classes.navButton} >Tutoring</Button>
-            <Button className={classes.navButton} onClick={handleAboutClick}>About me</Button>
-            <Button className={classes.navButton} >Blog</Button>
-            <Button className={classes.navButton} >Contact Me</Button>
-            <Button className={classes.navButton} >Papers</Button>
+            <Button className={classes.navButton} onClick={() => handleRouteClicked('tutoring')}>Tutoring</Button>
+            <Button className={classes.navButton} onClick={() => handleRouteClicked('about')}>About me</Button>
+            <Button className={classes.navButton} onClick={() => handleRouteClicked('blog')}>Blog</Button>
+            <Button className={classes.navButton} onClick={() => handleRouteClicked('contact')}>Contact Me</Button>
+            <Button className={classes.navButton} onClick={() => handleRouteClicked('papers')}>Papers</Button>
           </Box>
 
         </Toolbar>
