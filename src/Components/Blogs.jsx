@@ -33,16 +33,57 @@ const useStyles = makeStyles(() => ({
     border: '2px solid black',
     borderRadius: 10,
     marginRight: '2%',
-    [ '@media (max-width:1000px)' ]: {
-      width: '25%'
-    },
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    [ '@media (max-width:1100px)' ]: {
+      width: '25%',
+      marginBottom: 20,
+      height: '460px'
+    },
+    [ '@media (max-width:1000px)' ]: {
+      width: '25%',
+      marginBottom: 20,
+      height: '485px'
+    },
+    [ '@media (max-width:900px)' ]: {
+      width: '30%',
+      marginBottom: 20,
+      height: '485px'
+    },
+    [ '@media (max-width:800px)' ]: {
+      width: '30%',
+      marginBottom: 20,
+      height: '532px'
+    },
+    [ '@media (max-width:700px)' ]: {
+      width: '40%',
+      marginBottom: 20,
+      height: '460px'
+    },
+    [ '@media (max-width:600px)' ]: {
+      width: '40%',
+      marginBottom: 20,
+      height: '530px'
+    },
+    [ '@media (max-width:500px)' ]: {
+      width: '60%',
+      marginBottom: 20,
+      height: '435px'
+    },
+    [ '@media (max-width:400px)' ]: {
+      width: '60%',
+      marginBottom: 20,
+      height: '477px'
+    },
   },
   blogImage: {
     width: '100%',
-    height: '150px'
+    height: '150px',
+    [ '@media (max-width:500px)' ]: {
+      width: '100%',
+      height: '100px',
+    },
   },
   cardContent: {
     padding: 0,
@@ -71,7 +112,7 @@ const useStyles = makeStyles(() => ({
   cardActions: {
     border: '2px solid black',
     bottom: 0
-  }
+  },
 }));
 
 const Blogs = () => {

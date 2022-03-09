@@ -62,14 +62,14 @@ const useStyles = makeStyles(() => ({
   },
   root: {
     flexGrow: 1,
-    marginTop: 15
+    marginTop: 15,
   },
   paper: {
     height: 270,
     width: 150
   },
   control: {
-    padding:  2
+    padding: 2
   },
   cardHeader: {
     textAlign: 'center'
@@ -108,7 +108,7 @@ const Papers = () => {
   }, []);
 
   const formatDate = date => {
-    return  moment(date).format('DD-MM-YYYY');
+    return moment(date).format('DD-MM-YYYY');
   };
 
   return (
