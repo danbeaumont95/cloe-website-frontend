@@ -82,14 +82,12 @@ const Blogs = () => {
   useEffect(() => {
     BlogService.getAllBlogs()
       .then((res) => {
-        console.log(res, 'RES');
         setBlogs(res.data.data);
       })
       .catch((err) => {
         console.log(err, 'err');
       });
   }, []);
-  console.log(blogs, 'blogs');
 
   const formatDate = date => {
     return  moment(date).format('DD-MM-YYYY');

@@ -111,7 +111,6 @@ const Papers = () => {
     return  moment(date).format('DD-MM-YYYY');
   };
 
-  console.log(papers, 'papers');
   return (
     <div className={classes.allContent}>
       <div className={classes.container}>
