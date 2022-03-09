@@ -122,7 +122,7 @@ const NavBar = () => {
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <Button className={classes.navButton} onClick={() => handleRouteClicked('tutoring')}>Tutoring</Button>
             <Button className={classes.navButton} onClick={() => handleRouteClicked('about')}>About me</Button>
-            <Button className={classes.navButton} onClick={() => handleRouteClicked('blog')}>Blog</Button>
+            <Button className={classes.navButton} onClick={() => handleRouteClicked('blogs')}>Blogs</Button>
             <Button className={classes.navButton} onClick={() => handleRouteClicked('contact')}>Contact Me</Button>
             <Button className={classes.navButton} onClick={() => handleRouteClicked('papers')}>Papers</Button>
           </Box>
