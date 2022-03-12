@@ -11,6 +11,7 @@ import Footer from './Components/Footer';
 import Papers from './Components/Papers';
 import Blogs from './Components/Blogs';
 import Contact from './Components/Contact';
+import Tutoring from './Components/Tutoring';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
       <NavBar />
       <Router>
         <Routes>
+          <Route path="/" element={<Tutoring />} />
+          <Route path="/tutoring" element={<Tutoring />} />
           <Route path="/about" element={<About />} />
           <Route path="/papers" element={<Papers />} />
           <Route path="/blogs" element={<Blogs />} />
